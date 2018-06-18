@@ -27,7 +27,7 @@ cp -r css ~/.pandoc/.
 	* Set pandoc path (usually */usr/bin/pandoc*)
 	* Set the command line arguments: `--template=/home/name/.pandoc/templates/html.template, --filter=/home/name/.pandoc/filters/pandoc-crossref, --filter=pandoc-citeproc, --bibliography=/path/libraryName.bib,--csl=/home/name/.pandoc/csl/apsa.csl`
 	* Set the pandoc options: `markdown+simple_tables+table_captions+yaml_metadata_block`
-	* **Warning hacky approach: **If the spinning octocat in atom is driving you completely bonkers just find and eliminate the little bugger
+	* **Warning hacky approach:** If the spinning octocat in atom is driving you completely bonkers just find and eliminate the little bugger
 		* For cautious people: `find . -name "*octocat-spinner*"` and remove all these files
 		* For badasses: `find . -name "*octocat-spinner*" | xargs rm`
 
