@@ -2,16 +2,16 @@
 ## containing the paper you are writing. Assuming you are using the
 ## rest of the toolchain here, you can use it to create .html, .tex,
 ## and .pdf output files (complete with bibliography, if present) from
-## your markdown or Rmarkdown fies. 
+## your markdown or Rmarkdown fies.
 ## -	Change the paths at the top of the file as needed.
-## -	Using `make` without arguments will generate html, tex, and pdf 
+## -	Using `make` without arguments will generate html, tex, and pdf
 ## 	output files from all of the files with the designated markdown
-##	extension. The default is `.md` but you can change this. 
-## -	You can specify an output format with `make tex`, `make pdf`,  
+##	extension. The default is `.md` but you can change this.
+## -	You can specify an output format with `make tex`, `make pdf`,
 ## - 	`make html`, or `make docx`.
-## -	Doing `make clean` will remove all the .tex, .html, .pdf, and .docx files 
+## -	Doing `make clean` will remove all the .tex, .html, .pdf, and .docx files
 ## 	in your working directory. Make sure you do not have files in these
-##	formats that you want to keep! 
+##	formats that you want to keep!
 
 ## Markdown extension (e.g. md, markdown, mdown).
 MEXT = md
@@ -48,16 +48,16 @@ tex:	clean $(TEX)
 docx:	clean $(DOCX)
 
 %.html:	%.md
-	pandoc -r $(OPTIONS) -w html  --template=$(PREFIX)/templates/html.template --css=$(PREFIX)/css/kultiad-serif.css --filter ./additionalFilters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl --bibliography=$(BIB) --mathjax -o $@ $<
+	pandoc -r $(OPTIONS) -w html  --template=$(PREFIX)/templates/html.template --css=$(PREFIX)/css/kultiad-serif.css --filter /home/bram/.pandoc/filters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl --bibliography=$(BIB) --mathjax -o $@ $<
 
 %.docx: %.md
-	pandoc -r $(OPTIONS) -w docx --reference-doc=$(PREFIX)/templates/custom-reference.docx  --filter ./additionalFilters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl --bibliography=$(BIB) -o $@ $<
+	pandoc -r $(OPTIONS) -w docx --reference-doc=$(PREFIX)/templates/custom-reference.docx  --filter /home/bram/.pandoc/filters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl --bibliography=$(BIB) -o $@ $<
 
 %.tex:	%.md
-	pandoc -r $(OPTIONS) -w latex -s  --pdf-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter ./additionalFilters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/ajps.csl --bibliography=$(BIB) -o $@ $<
+	pandoc -r $(OPTIONS) -w latex -s  --pdf-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter /home/bram/.pandoc/filters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/ajps.csl --bibliography=$(BIB) -o $@ $<
 
 %.pdf:	%.md
-	pandoc -r $(OPTIONS) -s --verbose  --pdf-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter ./additionalFilters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl --bibliography=$(BIB) -o $@ $<
+	pandoc -r $(OPTIONS) -s --verbose  --pdf-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter /home/bram/.pandoc/filters/pandoc-crossref --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl --bibliography=$(BIB) -o $@ $<
 
 
 clean:

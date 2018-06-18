@@ -22,6 +22,11 @@ cp -r css ~/.pandoc/.
 ## Usage
 * Go to the example directory and run `make` to build the *.docx .tex .pdf* files from *template.md* 
 * Use `make clean` to clean the directory
+* This setup works perfectly with atom's [markdown preview enhanced package](https://github.com/shd101wyy/markdown-preview-enhanced).
+	* Select *'use Pandoc Parser'*
+	* Set pandoc path (usually */usr/bin/pandoc*)
+	* Set the command line arguments: `--template=/home/name/.pandoc/templates/html.template, --filter=/home/name/.pandoc/filters/pandoc-crossref, --filter=pandoc-citeproc, --bibliography=/path/libraryName.bib,--csl=/home/name/.pandoc/csl/apsa.csl`
+	* Set the pandoc options: `markdown+simple_tables+table_captions+yaml_metadata_block`
 
 ## Credits
 I've got most of the material from [Kieran Healy's setup](https://github.com/pandoc-scholar/pandoc-scholar):
