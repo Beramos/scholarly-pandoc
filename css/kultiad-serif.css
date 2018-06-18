@@ -5,9 +5,9 @@
    Title: Kultiad
    Author: Peter Sziebig - @bigpe; Modified by Kieran Healy - @kjhealy
    Description: Easy to read. Pandoc style elements. 
+   
+   Adapted by Bram De Jaegher
 */
-
-
 
 
 html {
@@ -102,6 +102,7 @@ a:hover {
 
 p, pre {
     margin: 1em 0;
+    text-align: justify;
 }
 
 code, kbd, pre, samp {
@@ -235,6 +236,7 @@ li {
 
 figure > figcaption {
     margin-top: 0.5em;
+    text-align:center;
 }
 small, dd, figcaption {
     color: #A19C91;

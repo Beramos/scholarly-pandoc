@@ -31,6 +31,7 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
+
 </head>
 <body>
 $for(include-before)$
