@@ -1,0 +1,44 @@
+After a lot of problems and trying different blog post i finally stumbled upon the scholdoc 
+
+http://scholdoc.scholarlymarkdown.com/
+
+First install pandoc and pandoc-citeproc for citations
+
+the problem with scoldoc is that is not yet fully functional with docx
+
+This implementation of scholarly markdown is the first one I got to work.
+https://github.com/pandoc-scholar/pandoc-scholar tis de anderen
+
+You need a working tex installation, i propose texlive
+
+When building with tex it is quite possible that you get an error that lmodern.sty is not found.
+
+Install the full texlive package:
+sudo apt-get install texlive-full
+
+copy templates to ~/.pandoc/templates
+copy csl to ~/.pandoc/csl
+copy css to ~/.pandoc/css
+
+some additional templating dependencies are included in the folder, you can either copy them every document of put em in a central location where tex can find it, in the folder texmf:
+
+Templates: https://github.com/kjhealy/pandoc-templates
+
+
+----- Changex ----
+removed VC package
+removed minionPro font (proprietary font) still looking for a good font. Libertine is on my radar
+
+----- Usage -------
+make to run
+make clean to clean
+
+[more info here](https://github.com/pandoc-scholar/pandoc-scholar)
+
+I additionally use cross-ref for referenceing and numbering equations 
+
+[this package](https://github.com/lierdakil/pandoc-crossref/releases/tag/v0.3.2.0)
+
+[tutorial here](https://hackage.haskell.org/package/pandoc-crossref-0.2.2.1)
+
+just copy the filter in you're folder

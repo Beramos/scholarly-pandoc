@@ -1,2 +1,3 @@
-# scholarly-pandoc
-My scholarly pandoc setup. Markdown syntax as basis and conversion to .docx .tex and .pdf
+# README
+
+This is my setup for rich scholarly markdown

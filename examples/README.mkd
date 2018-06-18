@@ -1,0 +1,8 @@
+# README
+This is an example to show how to run scholarly pandoc
+
+## How to
+
+You can build the .docx, .tex, and .pdf file by running the 'make' commando.
+
+You can remove the generated files by running 'make clean'.
