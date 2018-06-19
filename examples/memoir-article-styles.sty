@@ -717,6 +717,21 @@
 % \makeevenhead{kjhappendix}{\footnotesize\scshape Appendix}{}{\scshape\thepage}
 % \makeoddhead{kjhappendix}{}{}{\footnotesize Data and Methods for \rightmark\normalsize\ \ \scshape\thepage}
 
+%% fix longtable
+\newenvironment{longtable}[2][c]
+   {\table[h]
+    \setbox0=\vbox\bgroup \def\caption##1{\omit\gdef\captiontext{##1}}
+    \ifx c#1\centering\fi \ifx l#1\raggedright\fi \ifx r#1\raggedleft\fi
+    \tabular{#2}
+   }
+   {\endtabular
+    \egroup
+    \ifx\captiontext\undefined \else 
+       \caption{\captiontext}\par\medskip \global\let\captiontext=\undefined \fi
+    \unvbox0 
+    \endtable
+   }
+
 %% Create a command to make a note at the top of the first page describing the
 %% publication status of the paper. 
 \newcommand{\published}[1]{% 
