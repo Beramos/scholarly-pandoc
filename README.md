@@ -2,7 +2,7 @@
 This is my setup for rich scholarly markdown.
 
 ## Disclaimer
-Most of the templates and scripts are developed or inspired by others. I've only made minor changes to tailor the style to my own preferences. This is scholarly markdown is currently work-in-progress.
+Most of the templates and scripts are developed or inspired by others. I've only made minor changes to tailor the style to my own preferences.
 
 ## Installation
 * Clone this repository.
