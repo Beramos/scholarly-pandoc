@@ -168,6 +168,9 @@ figure {
     margin-top: 2em;
 }
 
+figure > img {
+    margin: 0 auto;
+}
 
 hr {
     -moz-border-bottom-colors: none;
