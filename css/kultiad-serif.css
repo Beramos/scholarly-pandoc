@@ -172,6 +172,11 @@ figure > img {
     margin: 0 auto;
 }
 
+figure > figcaption {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 hr {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
